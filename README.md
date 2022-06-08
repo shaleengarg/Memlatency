@@ -1,7 +1,6 @@
 # Memlatency
 
-1.	Cache Line Size
-Cacheline size was determined by timing the access times while increasing the stride of accessing an array. As soon as the stride gets past the Cacheline size, there is a bump in the access time. This size is captured and results are produced.
+1.	Cache Line Size was determined by timing the access times while increasing the stride of accessing an array. As soon as the stride gets past the Cacheline size, there is a bump in the access time. This size is captured and results are produced.
 
 Here, the biggest hurdle was to prevent prefetching. To do so, I multiplied the stride by an additive and then computed the bit wise AND with the max length (To prevent segfault).
 
